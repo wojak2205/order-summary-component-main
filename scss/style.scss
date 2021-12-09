@@ -1,0 +1,118 @@
+$primary-color-pale: hsl(225, 100%, 94%);
+$primary-color-bright: hsl(245, 75%, 52%);
+$neutral-color-vp: hsl(225, 100%, 98%);
+$neutral-color-desaturated: hsl(224, 23%, 55%);
+$neutral-color-dark: hsl(223, 47%, 23%);
+$white: #fff;
+
+
+body {
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-color: $primary-color-pale;
+    max-width: 1440px;
+    margin: 60px 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 20px;
+
+    &__img {
+        margin-bottom: 40px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        font: 25px bold;
+    }
+
+    &__description {
+        opacity: 60%;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__plan {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: $neutral-color-vp;
+        border-radius: 15px;
+
+        &--image {
+            grid-area: 1/1/3/2;
+        }
+
+        &--name {
+            grid-area: 1/2/2/3;
+            margin: auto auto 0 auto;
+            font-weight: 700;
+        }
+        
+        &--price {
+            grid-area: 2/2/3/3;
+            margin: 0 auto auto auto;
+        }
+
+        &--change {
+            grid-area: 1/3/3/4;
+            margin: auto;
+            transition: 0.3s;
+        }
+
+        &--change:hover {
+            text-decoration: none;
+        }
+    }
+    &__button {
+        max-width: 350px;
+        &--payment{
+            background-color: #382ae1;
+            border: none;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 550;
+            padding: 15px 50px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        
+        &--payment:hover {
+            background-color: #766cf1;
+        }
+
+        &--cancel {
+            background-color: $white;
+            border: none;
+            color: #000000;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 550;
+            padding: 15px 70px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        &--cancel:hover {
+            color: #828da9;
+        }
+
+    }
+}
